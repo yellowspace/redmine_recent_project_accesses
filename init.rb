@@ -1,4 +1,5 @@
 require 'projects_controller_hook.rb'
+require 'recent_project_acccesses_listener'
 
 Rails.configuration.to_prepare do
   unless ProjectsController.included_modules.include? RecentProjectAccesses::ProjectsControllerHook

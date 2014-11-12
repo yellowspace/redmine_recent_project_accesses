@@ -4,9 +4,9 @@ class RecentProjectAccess < ActiveRecord::Base
   belongs_to :project
 
   def self.save_access(user, project)
-    access = RecentProjectAccess.new
-    access.user = user
-    access.project = project
+    access = RecentProjectAccess.where(:user_id => user.id, :project_id => project.id).first
+    access ||= RecentProjectAccess.new(:user_id => user.id, :project_id => project.id)
+    access.updated_at = Time.now
     access.save
   end
 end

@@ -1,0 +1,8 @@
+<div class="projects box">
+  <h3>Recent Accesses</h3>
+  <ul>
+  <% accesses.each do |access| %>
+    <li><%= link_to_project(access.project) %> (<%= format_time(access.updated_at) %>)
+  <% end %>
+  </ul>
+</div>

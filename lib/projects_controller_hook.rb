@@ -1,6 +1,7 @@
 module RecentProjectAccesses
   module ProjectsControllerHook
     METHODS = %w(show)
+
     def self.included klass
       klass.send(:include, InstanceMethods)
       klass.class_eval do

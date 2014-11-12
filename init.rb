@@ -10,8 +10,8 @@ end
 Redmine::Plugin.register :redmine_recent_project_accesses do
   name 'Redmine Recent Project Accesses plugin'
   author 'suer'
-  description 'This is a plugin for Redmine'
+  description 'shows projects in the order of accessing'
   version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url 'https://github.com/suer/redmine_recent_project_accesses'
+  author_url 'http://d.hatena.ne.jp/suer'
 end

@@ -1,3 +1,0 @@
-= redmine_recent_project_accesses
-
-Description goes here

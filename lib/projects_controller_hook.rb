@@ -16,7 +16,6 @@ module RecentProjectAccesses
       METHODS.each do |method|
         define_method("#{method}_with_save_access") do
           self.send("#{method}_without_save_access")
-          logger.info "methods called"
           RecentProjectAccess.save_access(User.current, @project)
         end
       end

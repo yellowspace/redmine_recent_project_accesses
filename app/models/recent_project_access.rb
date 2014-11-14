@@ -1,12 +1,9 @@
-class RecentProjectAccess < ActiveRecord::Base
-  unloadable
-  belongs_to :user
-  belongs_to :project
-
+class RecentProjectAccess
   def self.save_access(user, project)
-    access = RecentProjectAccess.where(:user_id => user.id, :project_id => project.id).first
-    access ||= RecentProjectAccess.new(:user_id => user.id, :project_id => project.id)
-    access.updated_at = Time.now
-    access.save
+    recent_access_project_ids = user.pref[:recent_access_project_ids] || []
+    recent_access_project_id = recent_access_project_ids.delete(project.id) || project.id
+    recent_access_project_ids.unshift(recent_access_project_id)
+    user.pref[:recent_access_project_ids] = recent_access_project_ids
+    user.pref.save
   end
 end

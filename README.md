@@ -13,7 +13,6 @@ Type below commands:
 
     $ cd $RAILS_ROOT/vender/plugins
     $ git clone https://github.com/suer/redmine_recent_project_accesses.git
-    $ rake redmine:plugins:migrate NAME=redmine_recent_project_accesses RAILS_ENV=projection
 
 Then, restart your redmine.
 

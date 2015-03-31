@@ -1,4 +1,4 @@
-redmine_recent_project_accesses
+redmine\_recent\_project\_accesses
 ====================================
 
 This plugin shows projects in the order of accessing.

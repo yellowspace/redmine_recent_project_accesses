@@ -1,0 +1,9 @@
+<% projects = RecentProjectAccess.projects(User) %>
+<div class="projects box">
+  <h3><%= t(:recent_access) %></h3>
+  <ul>
+  <% projects.each do |project| %>
+    <li><%= link_to_project(project) %></li>
+  <% end %>
+  </ul>
+</div>

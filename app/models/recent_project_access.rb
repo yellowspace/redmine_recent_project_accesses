@@ -11,4 +11,9 @@ class RecentProjectAccess
     end
     user.pref.save
   end
+
+  def self.projects(user)
+    project_ids = user.current.pref[:recent_access_project_ids] || []
+    projects = project_ids.map{|id| Project.where(:id => id).first}.select{|project| project != nil}
+  end
 end

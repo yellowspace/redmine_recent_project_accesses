@@ -2,23 +2,27 @@ redmine\_recent\_project\_accesses
 ====================================
 
 This plugin shows projects in the order of accessing.
+The recent projects are shown in the welcome page
+(new) A My Page plug in is available for the my page section (alpha!)
 
-Author
+Authors
 ------------------------------
 * @suer
+* @lopezio
 
 Install
 ------------------------------
 Type below commands:
 
     $ cd $RAILS_ROOT/vender/plugins
-    $ git clone https://github.com/suer/redmine_recent_project_accesses.git
+    $ git clone https://github.com/yellowspace/redmine_recent_project_accesses.git
 
 Then, restart your redmine.
 
 Requirements
 ------------------------------
 * Redmine 2.4 or later
+* (tested also with Redmine 3.2.5)
 
 License
 ------------------------------
